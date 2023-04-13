@@ -7,4 +7,6 @@
 
 برای آشنا شدن با پایه‌های رزبری پای پیکو می‌توانید از عکس زیر استفاده کنید:
 
+![alt text](https://raw.githubusercontent.com/afshinnasiri/Run_rasberry_pi_pico/main/raspberry-pi-pico-gpio-1024x600.png)
+
 
