@@ -29,4 +29,14 @@ https://thonny.org/
 بعداز نصب نرم افزار فوق، آن را اجرا کنید. از بخش پایین نرم‌افزار با پورت مجازی ایجاد شده می‌توانید برد خود را برای آپلود کد انتخاب کنید:
 ![alt text](https://raw.githubusercontent.com/afshinnasiri/Run_rasberry_pi_pico/main/selecrpi.png)
 
-خب حالا که برد را انتخاب کردید شروع می‌کنیم به تست برد که روی برد یک LED وجود دارد که پین آن GP25 می‌باشد. به همین خاطر دستور 
+خب حالا که برد را انتخاب کردید شروع می‌کنیم به تست برد که روی برد یک LED وجود دارد که پین آن GP25 می‌باشد. به همین خاطر دستور زیر برای چشمک زدن آن را روی برد اجرا می‌کنیم:
+```
+from machine import Pin, Timer
+led = Pin(25, Pin.OUT)
+timer = Timer()
+
+def blink(timer):
+    led.toggle()
+
+timer.init(freq=2.5, mode=Timer.PERIODIC, callback=blink)
+```
